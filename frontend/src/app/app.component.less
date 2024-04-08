@@ -1,0 +1,55 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  @font-family: 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+// Navbar Styles
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFF; 
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.2); // Added box-shadow for depth
+  margin-bottom: 3%;
+  color: #262626; // Standard text color
+}
+
+.logo {
+  color: #069370;
+  text-decoration: none;
+  font-size: 36px; // Larger font size for prominence
+  font-weight: 700; // Bold font weight
+}
+
+.nav-links a {
+  color: #da4621;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.5s; // Smooth transition for hover effects
+
+  &:hover {
+    color: #76ff7a; // Bright green hover effect
+    text-decoration: underline;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; // Hide nav links on smaller screens
+
+    &.active {
+      display: flex;
+      flex-direction: column; // Stack links vertically
+      align-items: center;
+    }
+  }
+
+  .navbar {
+    flex-direction: column; // Stack logo and toggle button/nav links vertically
+  }
+}

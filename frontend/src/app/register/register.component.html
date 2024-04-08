@@ -1,0 +1,19 @@
+<div class="register-container">
+    <div class="register-form">
+      <h2>Register</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" #username placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" #email placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password"  #password placeholder="Enter password">
+      </div>
+      <button type="button" (click)="addUser(username.value, email.value, password.value)" >Register</button>
+    </div>
+  </div>
+  

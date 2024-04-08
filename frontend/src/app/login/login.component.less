@@ -1,0 +1,66 @@
+
+// Define some basic color and style variables
+@background-color: #f1f1f1;
+@form-background-color: #ffffff;
+@input-border-color: #ccc;
+@button-background-color: #8ebf42; // Greenish color for the button
+@button-hover-color: darken(@button-background-color, 10%); // Slightly darker on hover
+@font-family: 'Roboto', Arial, sans-serif;
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: @background-color;
+}
+
+.login-form {
+  padding: 20px;
+  border: 5px solid @form-background-color;
+  background: @form-background-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    text-align: center;
+    font-family: @font-family;
+    // Additional styling for the heading if needed
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    label {
+      margin-bottom: 5px;
+      // Style adjustments for labels if needed
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid @input-border-color;
+      box-sizing: border-box;
+      // Additional input styling like background-color, border-radius, etc.
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 14px 0;
+    background-color: @button-background-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: @button-hover-color;
+    }
+  }
+}
+
+// Responsive adjustments if necessary
+@media screen and (max-width: 300px) {
+  // Adjustments for smaller screens
+}

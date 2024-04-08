@@ -1,0 +1,36 @@
+<div >
+  <a href="/addEmployee"  class="btn-edit">Add Employee</a>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+      @for(employee of allemployee; track employee._id){
+      <tr>
+        <td>{{ employee.first_name }} {{ employee.last_name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>{{ employee.salary }}</td>
+
+        <td>
+            <a  href="edit/{{employee._id}}"class="btn-edit" >Edit</a>
+            <button class="btn-delete" (click)="deleteEmployee(employee._id)">Delete</button>
+            <a href="view/{{ employee._id }}" class="btn-edit">View</a>
+          </td>
+      </tr>
+    }
+
+</tbody>
+</table>
+
+
+
+  </div>
+  

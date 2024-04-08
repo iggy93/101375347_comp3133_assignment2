@@ -1,0 +1,33 @@
+
+<div class="container">
+    <h2>Modify Employee</h2>
+    <form class="form">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName" value={{data.first_name}}  name="firstName" #firstname ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" value={{data.last_name}} name="lastName" #lastname  ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" value={{data.email}}  name="email" #email  ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select class="form-control" id="gender" name="gender"  #gender ngModel required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="number" class="form-control" id="salary" value={{data.salary}}  #salary name="salary" ngModel required>
+            <input  class="form-control" id="id" value={{data._id}}  #id name="salary" hidden >
+
+        </div>
+        <button  class="btn btn-primary" (click)="updateEmployee(firstname.value,lastname.value,email.value,gender.value,salary.value,id.value) ">Submit</button>
+    </form>
+</div>
